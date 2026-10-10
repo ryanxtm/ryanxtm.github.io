@@ -1,0 +1,41 @@
+/* Skiper UI 52: expanding SSTP photo accordion. */
+.sstp-band.hover-expand-gallery{gap:10px;padding:4px 0 8px;overflow:visible;scroll-snap-type:none;height:clamp(240px,29vw,370px)}
+.hover-expand-gallery .band-frame{height:100%;flex:1 1 0;min-width:0;border-radius:24px;overflow:hidden;transition:flex .3s ease-in-out}
+.hover-expand-gallery .band-frame.is-active{flex:4.8 1 0}
+.hover-expand-gallery .band-photo{width:100%;max-width:none;height:100%;border-radius:inherit}
+.hover-expand-gallery .band-photo img{width:100%;height:100%;object-fit:cover;filter:none!important}
+.hover-expand-gallery .band-caption{inset:0 0 auto;height:20%;min-height:64px;display:flex;align-items:flex-start;padding:12px 14px;background:linear-gradient(to bottom,rgba(0,0,0,.82),rgba(0,0,0,.46) 65%,transparent);font-size:12px;line-height:1.35;text-align:left;opacity:0;pointer-events:none}
+.hover-expand-gallery .is-active .band-caption{opacity:1}
+.hover-expand-gallery .band-photo:focus-visible{outline:2px solid white;outline-offset:-4px}
+/* Skiper UI 58: two copies roll in opposite vertical positions, staggered from centre. */
+.text-roll{position:relative;display:inline-block;overflow:hidden;vertical-align:bottom;line-height:inherit;padding-block:.08em;margin-block:-.08em;white-space:nowrap}
+.roll-row{display:block}
+.roll-second{position:absolute;inset:0;padding-block:.08em}
+.roll-char{display:inline-block;transition:transform .4s ease-in-out;transition-delay:var(--roll-delay)}
+.roll-second .roll-char{transform:translateY(110%)}
+.roll-link:hover .roll-row:not(.roll-second) .roll-char,.roll-link:focus-visible .roll-row:not(.roll-second) .roll-char{transform:translateY(-110%)}
+.roll-link:hover .roll-second .roll-char,.roll-link:focus-visible .roll-second .roll-char{transform:translateY(0)}
+.directory-heading>.text-roll{margin-inline:5px}
+/* Skiper UI 40, Link001. Keep current-section indicators independent. */
+.skiper-positioned{position:relative}
+.animated-link-line{position:absolute;left:0;right:0;bottom:-2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .3s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.skiper-link:hover>.animated-link-line,.skiper-link:focus-visible>.animated-link-line{transform:scaleX(1);transform-origin:left}
+.animated-link-arrow{display:inline-block;opacity:0;transform:translateY(4px);transition:opacity .3s cubic-bezier(.4,0,.2,1),transform .3s cubic-bezier(.4,0,.2,1)}
+.skiper-link:hover .animated-link-arrow,.skiper-link:focus-visible .animated-link-arrow{opacity:1;transform:translateY(0)}
+.link-extra-arrow{position:absolute;left:calc(100% + 3px);top:0;font-size:.55em}
+.skiper-link.text-link,.skiper-link.header-work-link{border-bottom-color:transparent}
+.animation-credit{font:500 10px/1.4 sans-serif;opacity:.6;flex-basis:100%;text-align:right}
+@media(max-width:600px){.sstp-band.hover-expand-gallery{height:280px;gap:5px}.hover-expand-gallery .band-frame{border-radius:14px}.hover-expand-gallery .band-frame.is-active{flex:8 1 0}.hover-expand-gallery .band-caption{padding:10px;font-size:11px}}
+@media(prefers-reduced-motion:reduce){.roll-char,.animated-link-arrow,.animated-link-line,.hover-expand-gallery .band-frame{transition:none}.roll-link:hover .roll-row:not(.roll-second) .roll-char,.roll-link:focus-visible .roll-row:not(.roll-second) .roll-char{transform:none}.roll-second{display:none}}
+@media(max-width:400px){.site-header nav{gap:8px}.site-header nav a{font-size:clamp(10px,3vw,12px)}}
+/* Revision 53: allow the name's ornamental glyph overhang inside the roll window. */
+.wordmark .text-roll{padding-inline:.18em;margin-inline:-.18em}
+.wordmark .roll-second{padding-inline:.18em}
+/* Each footer link keeps its own space; credits occupy a separate row. */
+footer{flex-wrap:wrap;justify-content:flex-start;column-gap:48px;row-gap:24px}
+footer>.wordmark,footer>.footer-work,footer>.text-link{flex:0 0 auto;white-space:nowrap}
+footer>.animation-credit{width:100%;flex:0 0 100%;text-align:right}
+@media(max-width:600px){footer{column-gap:30px}footer>.wordmark{flex-basis:100%}footer>.animation-credit{text-align:left}}
+
+/* The animated line replaces the footer link’s original underline. */
+.footer-work.skiper-link{text-decoration:none;border-bottom:0}

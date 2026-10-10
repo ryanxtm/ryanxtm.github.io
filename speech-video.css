@@ -1,0 +1,23 @@
+/* Skiper67 adaptation: pointer-following play label and expanding video popover. */
+#speech .speech-highlights{grid-template-columns:1fr;gap:30px}
+.red-sparrow-feature{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+#speech .speech-highlights article+article{border-left:0;padding-left:0;border-top:1px solid #ffffff40;padding-top:26px}
+.red-sparrow-video{margin:0;min-width:0}
+.speech-video-preview{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:1px solid #ffffff40;background:#141414;overflow:hidden;cursor:pointer;border-radius:12px}
+.speech-video-preview video{width:100%;height:100%;object-fit:contain;display:block}
+.video-play-cursor{position:absolute;left:0;top:0;z-index:2;padding:8px 12px;color:white;font:500 14px/1.4 Chillax,Arial,sans-serif;mix-blend-mode:exclusion;pointer-events:none;opacity:0;transition:opacity .2s;white-space:nowrap}
+.speech-video-preview.is-pointing .video-play-cursor{opacity:1}
+.video-play-label{position:absolute;left:14px;bottom:12px;background:#0009;color:#fff;padding:5px 10px;border-radius:20px;font:500 12px/1.5 Chillax,Arial,sans-serif;transition:opacity .2s;pointer-events:none}
+.speech-video-preview.is-pointing .video-play-label{opacity:0}
+.red-sparrow-video figcaption{font:500 12px/1.4 Chillax,Arial,sans-serif;margin-top:10px;color:#ffffffb3}
+.speech-video-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100dvh;max-height:none;padding:40px;margin:0;border:0;background:transparent;overflow:hidden;color:#fff}
+.speech-video-dialog[open]{display:flex;align-items:center;justify-content:center}
+.speech-video-dialog::backdrop{background:#080b10e6;backdrop-filter:blur(16px);animation:video-backdrop-in .2s ease-out}
+.speech-video-dialog.is-closing::backdrop{animation:video-backdrop-out 1s ease forwards}
+.speech-video-panel{position:relative;width:min(1120px,100%);max-height:calc(100dvh - 80px);aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 24px 80px #0008}
+.speech-video-player{width:100%;height:100%;display:block;object-fit:contain}
+.speech-video-close{position:absolute;top:12px;right:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid #ffffff55;background:#0009;color:#fff;font:28px/1 Arial,sans-serif;display:grid;place-items:center}
+@keyframes video-backdrop-in{from{opacity:0}to{opacity:1}}
+@keyframes video-backdrop-out{0%,80%{opacity:1}100%{opacity:0}}
+@media(max-width:700px){.red-sparrow-feature{grid-template-columns:1fr;gap:24px}.speech-video-dialog{padding:16px}.speech-video-panel{max-height:calc(100dvh - 32px)}}
+@media(prefers-reduced-motion:reduce){.speech-video-dialog::backdrop,.speech-video-dialog.is-closing::backdrop{animation:none}.video-play-cursor{display:none}.speech-video-preview.is-pointing .video-play-label{opacity:1}}

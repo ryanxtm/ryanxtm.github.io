@@ -1,0 +1,259 @@
+/* Local Chillax for everyday copy; section display faces retain their theme. */
+@font-face{font-family:Chillax;src:url('assets/fonts/Chillax-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Chillax;src:url('assets/fonts/Chillax-Semibold.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:Chillax;src:url('assets/fonts/Chillax-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{--sans:Chillax,Arial,Helvetica,sans-serif}
+body{font-family:var(--sans);font-weight:500}
+p,li,small,summary,nav a,.text-link,.download-link,.footer-work,.header-work-link,.file-type,.entry-meta,.gallery-toolbar h3,.band-caption,.mentor-column h4,.mentor-column ul,.speech-result span,.circle-label{font-weight:500}
+strong,b{font-weight:600}
+.research-document-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px;justify-content:center}
+.research-document-links a{font-size:14px}
+.featured-neurons{background:white}
+.featured-neurons img{object-fit:contain}
+footer{position:relative;z-index:5;margin-bottom:0;background:#e6ede3}
+body{position:relative}
+
+/* Annotated display typography, revision 28. */
+@font-face{font-family:Hebdomadal;src:url('assets/fonts/Hebdomadal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Dmitrieva;src:url('assets/fonts/DmitrievaSP.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Hayko;src:url('assets/fonts/Hayko-DEMO.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Fasad;src:url('assets/fonts/Fasad-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+#intro-title,.site-header .wordmark,.intro-directory .directory-heading,.intro-directory .directory-heading i{font-family:Hebdomadal,Chillax,sans-serif;font-weight:400;font-style:normal}
+#research-title,#research-title em{font-family:Dmitrieva,Chillax,sans-serif;font-weight:400;font-style:normal}
+.research .research-copy h3,.research .work-entry h3{font-family:Chillax,Arial,sans-serif;font-weight:600}
+#mentorship-title,.mentorship .mentor-column h3{font-family:Hayko,Chillax,sans-serif;font-weight:400;font-style:normal;letter-spacing:0}
+.transition-paper{background:linear-gradient(180deg,#eed5b0,#000)}
+#speech{background:#000;color:#fff}
+#speech *{color:#fff!important;border-color:#ffffff66}
+#speech #speech-title{font-family:Fasad,Arial,sans-serif;font-weight:400;font-style:normal;text-transform:uppercase;color:#000!important;background:#f6efe3;padding:12px 16px;display:inline-block;letter-spacing:0;line-height:1.08;font-size:clamp(32px,5vw,66px)}
+#speech .speech-heading{align-items:center}
+@media(max-width:600px){#speech #speech-title{font-size:clamp(28px,7.4vw,40px);padding:10px 12px}.intro-directory .directory-heading{flex-wrap:wrap}}
+
+/* Annotation refinements, revision 29. */
+@font-face{font-family:Timeless;src:url('assets/fonts/Timeless-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Myriad Light';src:url('assets/fonts/MyriadPro-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+#theater-title,#theater-title em,#everybody-heading,#extended-drama-title{font-family:Timeless,Chillax,sans-serif;font-weight:700;font-style:normal}
+#extended-drama-title em{font-family:'Myriad Light',Arial,sans-serif;font-weight:300;font-style:normal;letter-spacing:0}
+.intro-directory a:nth-child(1) .directory-heading,.intro-directory a:nth-child(1) .directory-heading i{font-family:Dmitrieva,Chillax,sans-serif;font-weight:400}
+.intro-directory a:nth-child(2) .directory-heading,.intro-directory a:nth-child(2) .directory-heading i{font-family:Timeless,Chillax,sans-serif;font-weight:700}
+.intro-directory a:nth-child(3) .directory-heading,.intro-directory a:nth-child(3) .directory-heading i{font-family:Hayko,Arial,sans-serif;font-weight:400}
+.intro-directory a:nth-child(4) .directory-heading,.intro-directory a:nth-child(4) .directory-heading i{font-family:'Libre Caslon Display',Chillax,sans-serif;font-weight:400}
+/* Fasad is a reversed face: white glyph blocks reveal black letterforms. */
+#speech #speech-title{background:#000;color:#fff!important;padding:12px 0}
+
+/* Tight white backing for the Speech & Debate display title. */
+#speech #speech-title{color:#000!important;background:#fff;padding:0;width:fit-content;line-height:1;display:inline-block}
+
+/* Crop the unused descent below this uppercase Fasad title. */
+#speech #speech-title{height:.72em;overflow:hidden;vertical-align:top}
+#speech #speech-title{background:linear-gradient(to bottom,transparent 0 .035em,#fff .035em .665em,transparent .665em)}
+
+/* Annotation refinements, revision 32. */
+.site-header .wordmark{font-size:clamp(30px,3.3vw,42px);line-height:1;white-space:nowrap}
+#theater-title em{font-family:'Myriad Light',Arial,sans-serif;font-weight:300;font-style:normal}
+#theater .theater-bottom .text-link{font-family:Chillax,Arial,sans-serif;font-weight:500;font-style:normal}
+#speech #speech-title{white-space:nowrap;width:max-content;max-width:100%;height:.72em}
+@media(max-width:600px){.site-header .wordmark{font-size:30px}}
+
+/* Match header navigation to each directory display face. */
+.site-header nav a[href="#research"]{font-family:Dmitrieva,Chillax,sans-serif;font-weight:400}
+.site-header nav a[href="#theater"]{font-family:Timeless,Chillax,sans-serif;font-weight:700}
+.site-header nav a[href="#mentorship"]{font-family:Hayko,Arial,sans-serif;font-weight:400}
+.site-header nav a[href="#speech"]{font-family:'Libre Caslon Display',Chillax,sans-serif;font-weight:400}
+.site-header nav a{font-style:normal}
+
+/* Theatre heading swap and forthcoming credits, revision 36. */
+#theater-title{font-family:'Myriad Light',Arial,sans-serif;font-weight:300;font-style:normal}
+#theater-title em{font-family:Timeless,Chillax,sans-serif;font-weight:700;font-style:normal}
+.upcoming-productions{padding:24px 0;border-top:1px solid #ffffff40}
+#upcoming-productions-title{font-family:Timeless,Chillax,sans-serif;font-weight:700;font-size:28px;line-height:1.15;margin-bottom:16px}
+.upcoming-productions .credit-list{font-family:Chillax,Arial,sans-serif;max-width:760px}
+.upcoming-productions .credit-list li{padding:10px 0}
+.upcoming-productions .credit-list small{display:block;line-height:1.5;margin-top:4px}
+
+/* Continuous section blends: flat endpoint slopes and matched boundary colors. */
+.transition,.transition-warm,.transition-paper{height:clamp(110px,15vw,200px);margin:0}
+.transition-stage{background:linear-gradient(180deg,#ffffff 0.000%,#ffffff 1.562%,#ffffff 3.125%,#ffffff 4.688%,#ffffff 6.250%,#ffffff 7.812%,#fefefe 9.375%,#fdfdfd 10.938%,#fcfcfc 12.500%,#fafafa 14.062%,#f8f8f8 15.625%,#f6f6f6 17.188%,#f3f3f4 18.750%,#f0f0f1 20.312%,#eceded 21.875%,#e9e9ea 23.438%,#e5e5e6 25.000%,#e0e1e2 26.562%,#dcdcde 28.125%,#d7d7d9 29.688%,#d2d2d4 31.250%,#cdcdcf 32.812%,#c7c7ca 34.375%,#c1c2c5 35.938%,#bbbcbf 37.500%,#b5b6b9 39.062%,#afb0b3 40.625%,#a9a9ad 42.188%,#a2a3a7 43.750%,#9c9da1 45.312%,#95969b 46.875%,#8f9095 48.438%,#88898e 50.000%,#818288 51.562%,#7b7c82 53.125%,#74757c 54.688%,#6e6f76 56.250%,#676970 57.812%,#61626a 59.375%,#5b5c64 60.938%,#55565e 62.500%,#4f5058 64.062%,#494b53 65.625%,#43454e 67.188%,#3e4049 68.750%,#393b44 70.312%,#34363f 71.875%,#30313b 73.438%,#2b2d37 75.000%,#272933 76.562%,#242530 78.125%,#20222c 79.688%,#1d1f29 81.250%,#1a1c27 82.812%,#181a25 84.375%,#161823 85.938%,#141621 87.500%,#131520 89.062%,#12141f 90.625%,#11131e 92.188%,#11131e 93.750%,#11131e 95.312%,#11131e 96.875%,#11131e 98.438%,#11131e 100.000%)}
+.transition-warm{background:linear-gradient(180deg,#11131e 0.000%,#11131e 1.562%,#11131e 3.125%,#11131e 4.688%,#11131e 6.250%,#11131e 7.812%,#12141f 9.375%,#13151f 10.938%,#141620 12.500%,#161721 14.062%,#171922 15.625%,#1a1b24 17.188%,#1c1d25 18.750%,#1f1f27 20.312%,#222229 21.875%,#26252c 23.438%,#29282e 25.000%,#2d2c31 26.562%,#323034 28.125%,#363437 29.688%,#3b383a 31.250%,#403c3d 32.812%,#454140 34.375%,#4a4544 35.938%,#504a47 37.500%,#554f4b 39.062%,#5b544f 40.625%,#615953 42.188%,#675f57 43.750%,#6d645b 45.312%,#73695f 46.875%,#796f63 48.438%,#7f7467 50.000%,#86796b 51.562%,#8c7f6f 53.125%,#928473 54.688%,#988977 56.250%,#9e8f7b 57.812%,#a4947f 59.375%,#aa9983 60.938%,#af9e87 62.500%,#b5a38a 64.062%,#baa78e 65.625%,#bfac91 67.188%,#c4b094 68.750%,#c9b497 70.312%,#cdb89a 71.875%,#d2bc9d 73.438%,#d6c0a0 75.000%,#d9c3a2 76.562%,#ddc6a5 78.125%,#e0c9a7 79.688%,#e3cba9 81.250%,#e5cdaa 82.812%,#e8cfac 84.375%,#e9d1ad 85.938%,#ebd2ae 87.500%,#ecd3af 89.062%,#edd4af 90.625%,#eed5b0 92.188%,#eed5b0 93.750%,#eed5b0 95.312%,#eed5b0 96.875%,#eed5b0 98.438%,#eed5b0 100.000%)}
+.transition-paper{background:linear-gradient(180deg,#eed5b0 0.000%,#eed5b0 1.562%,#eed5b0 3.125%,#eed5b0 4.688%,#eed5b0 6.250%,#eed5b0 7.812%,#edd4af 9.375%,#ecd3af 10.938%,#ebd2ae 12.500%,#e9d1ac 14.062%,#e7cfab 15.625%,#e5cda9 17.188%,#e2caa7 18.750%,#dfc7a5 20.312%,#dbc4a2 21.875%,#d8c19f 23.438%,#d4bd9d 25.000%,#cfba99 26.562%,#cbb596 28.125%,#c6b192 29.688%,#c1ad8f 31.250%,#bca88b 32.812%,#b6a387 34.375%,#b09e82 35.938%,#aa987e 37.500%,#a49379 39.062%,#9e8d75 40.625%,#988870 42.188%,#91826b 43.750%,#8b7c67 45.312%,#847662 46.875%,#7e705d 48.438%,#776b58 50.000%,#706553 51.562%,#6a5f4e 53.125%,#635949 54.688%,#5d5345 56.250%,#564d40 57.812%,#50483b 59.375%,#4a4237 60.938%,#443d32 62.500%,#3e372e 64.062%,#383229 65.625%,#322d25 67.188%,#2d2821 68.750%,#28241e 70.312%,#23201a 71.875%,#1f1b17 73.438%,#1a1813 75.000%,#161411 76.562%,#13110e 78.125%,#0f0e0b 79.688%,#0c0b09 81.250%,#090807 82.812%,#070605 84.375%,#050404 85.938%,#030302 87.500%,#020201 89.062%,#010101 90.625%,#000000 92.188%,#000000 93.750%,#000000 95.312%,#000000 96.875%,#000000 98.438%,#000000 100.000%)}
+.transition-footer{background:linear-gradient(180deg,#000000 0.000%,#000000 1.562%,#000000 3.125%,#000000 4.688%,#000000 6.250%,#000000 7.812%,#010101 9.375%,#020202 10.938%,#030303 12.500%,#050505 14.062%,#070707 15.625%,#090909 17.188%,#0c0c0c 18.750%,#0f0f0e 20.312%,#121312 21.875%,#161615 23.438%,#191a19 25.000%,#1e1f1d 26.562%,#222322 28.125%,#272826 29.688%,#2c2d2b 31.250%,#313230 32.812%,#363835 34.375%,#3c3d3b 35.938%,#414341 37.500%,#474946 39.062%,#4d504c 40.625%,#535652 42.188%,#5a5c58 43.750%,#60635f 45.312%,#666965 46.875%,#6d706b 48.438%,#737671 50.000%,#797d78 51.562%,#80847e 53.125%,#868a84 54.688%,#8c918b 56.250%,#939791 57.812%,#999d97 59.375%,#9fa49d 60.938%,#a5aaa2 62.500%,#aab0a8 64.062%,#b0b5ae 65.625%,#b5bbb3 67.188%,#bac0b8 68.750%,#bfc5bd 70.312%,#c4cac1 71.875%,#c8cec6 73.438%,#cdd3ca 75.000%,#d0d7ce 76.562%,#d4dad1 78.125%,#d7ded5 79.688%,#dae1d7 81.250%,#dde4da 82.812%,#dfe6dc 84.375%,#e1e8de 85.938%,#e3eae0 87.500%,#e4ebe1 89.062%,#e5ece2 90.625%,#e6ede3 92.188%,#e6ede3 93.750%,#e6ede3 95.312%,#e6ede3 96.875%,#e6ede3 98.438%,#e6ede3 100.000%)}
+#mentorship{background:#eed5b0}
+.theater-glitter{mask-image:linear-gradient(transparent,#000 11%,#000 86%,transparent)}
+footer{border-top:0}
+
+/* White title experiment; previous state saved in design-notes/speech-title-v38-saved. */
+#speech #speech-title{color:#fff!important;background:none}
+
+#speech #speech-title{height:auto;overflow:visible;width:8.124em;max-width:100%;line-height:0}
+#speech-title .speech-title-letterforms{display:block;width:100%;height:auto}
+
+/* Themed directory cards and matching footer wordmark, revision 40. */
+.intro-directory a{position:relative;isolation:isolate;padding-left:12px;transition:filter .25s}
+.intro-directory a[href="#research"]{background:#eaf4f8}
+.intro-directory a[href="#theater"]{background:#f8eaf2}
+.intro-directory a[href="#theater"]::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('assets/theater-glitter.svg') center/550px;opacity:.12}
+.intro-directory a[href="#mentorship"]{background:#f4ead8}
+.intro-directory a[href="#speech"]{background:#d6dce1}
+.intro-directory a:hover{filter:brightness(.97)}
+footer .wordmark{font-family:Hebdomadal,Chillax,sans-serif;font-weight:400;font-style:normal;font-size:clamp(30px,3.3vw,42px);line-height:1;letter-spacing:0;white-space:nowrap}
+#speech #speech-title{width:13.524em;padding:0;background:transparent;max-width:100%;color:#fff!important}
+.speech-heading>div{min-width:0}
+.signature-cutout{height:clamp(90px,12vw,150px);width:auto;aspect-ratio:var(--figure-ratio)}
+.signature-cutout img{display:block;width:100%;height:100%;object-fit:contain;clip-path:none}
+@media(max-width:600px){footer .wordmark{font-size:30px}.signature-cutout{height:100px}}
+
+/* Force every visible title pixel to pure white, independent of SVG color. */
+#speech-title .speech-title-letterforms{filter:brightness(0) invert(1);opacity:1;mix-blend-mode:normal;background:transparent}
+
+/* Annotation refinements, revision 43. */
+.speech-title-caption{display:flex;justify-content:space-between;width:100%;margin-top:16px;font-family:Chillax,Arial,sans-serif;font-weight:500;font-size:clamp(9px,1.2vw,14px);line-height:1.4;color:#fff;white-space:pre}
+.research-featured-divider{border-top:1px solid #142c4555;padding-top:28px;margin-top:24px}
+.mentor-column:first-child h4{margin-bottom:18px}
+.mentor-column:first-child ul{margin-top:0;padding-top:16px;border-top:1px solid #61452d25}
+.upcoming-productions summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;padding:4px 0}
+.upcoming-productions summary::-webkit-details-marker{display:none}
+.upcoming-productions summary h3{margin:0!important}
+.upcoming-toggle{font:500 25px Chillax,Arial,sans-serif;transition:transform .2s}
+.upcoming-productions[open] .upcoming-toggle{transform:rotate(45deg)}
+.upcoming-productions .credit-list{margin-top:18px}
+.line-intro{height:auto;overflow:visible}
+.signature-cutouts{height:100%;z-index:6}
+.signature-cutout{padding:0;border:0;background:transparent;cursor:pointer;pointer-events:auto;overflow:visible;outline-offset:6px;border-radius:12px;touch-action:manipulation}
+.signature-cutout:disabled{pointer-events:none}
+.signature-cutout img{transition:filter .2s;filter:drop-shadow(0 4px 4px #24344520)}
+.signature-cutout:hover img,.signature-cutout:focus-visible img{filter:drop-shadow(0 0 7px #6fa5bcaa) brightness(1.07)}
+.signature-cutout:focus-visible{outline:2px solid #477b90}
+.signature-cutout[aria-expanded="true"]{z-index:10}
+.avatar-bubble{position:absolute;z-index:12;left:50%;top:calc(100% + 14px);width:220px;max-width:70vw;transform:translateX(-50%);padding:12px 15px;background:#fff;color:#243445;border:1px solid #688c9655;box-shadow:0 5px 20px #24344520;border-radius:16px;font:500 13px/1.5 Chillax,Arial,sans-serif;text-align:left;animation:bubble-pop .22s ease-out}
+.avatar-bubble::before{content:"";position:absolute;top:-7px;left:calc(50% - 6px);width:12px;height:12px;background:#fff;border-top:1px solid #688c9655;border-left:1px solid #688c9655;transform:rotate(45deg)}
+.cutout-2 .avatar-bubble,.cutout-4 .avatar-bubble{top:auto;bottom:calc(100% + 14px)}
+.cutout-2 .avatar-bubble::before,.cutout-4 .avatar-bubble::before{top:auto;bottom:-7px;transform:rotate(225deg)}
+.avatar-bubble[hidden]{display:none}
+.signature-hint{position:absolute;left:5%;width:90%;text-align:center;font:500 12px/1.5 Chillax,Arial,sans-serif;color:#526a76;margin:0;pointer-events:none}
+@keyframes bubble-pop{from{opacity:0;scale:.88}to{opacity:1;scale:1}}
+@media(max-width:600px){.signature-cutout{height:85px}.avatar-bubble{width:180px;font-size:12px}.signature-hint{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.signature-cutouts{display:block}.avatar-bubble{animation:none}}
+@media(max-width:600px){
+ .cutout-1 .avatar-bubble{left:0;transform:none}
+ .cutout-1 .avatar-bubble::before{left:15px}
+ .cutout-4 .avatar-bubble{left:auto;right:0;transform:none}
+ .cutout-4 .avatar-bubble::before{left:auto;right:20px}
+}
+
+/* Contact loop and quieter disclosure headings, revision 47. */
+.upcoming-productions{padding:0;border-top:0}
+.upcoming-productions summary{padding:12px 0;border-top:1px solid #9c839355;font-size:13px}
+#upcoming-productions-title{font:inherit;line-height:inherit;margin:0}
+.upcoming-toggle{font:500 13px/normal Chillax,Arial,sans-serif}
+.contact-strip{position:relative;display:flex;align-items:center;justify-content:center;height:124px;margin-top:32px}
+.contact-icons{display:flex;align-items:center;gap:30px}
+.contact-copy{position:relative;display:grid;place-items:center;width:44px;height:44px;padding:8px;border:0;border-radius:50%;background:transparent;color:#243445;cursor:pointer;transition:background .2s,transform .2s}
+.contact-copy svg{display:block;width:26px;height:26px}
+.contact-copy:hover,.contact-copy:focus-visible{background:#eaf4f8;transform:translateY(-3px)}
+.contact-copy:focus-visible{outline:2px solid #477b90;outline-offset:4px}
+.contact-copy:disabled{cursor:default}
+.contact-tooltip{display:none;position:absolute;z-index:10;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);width:220px;padding:10px 14px;border:1px solid #688c9655;border-radius:14px;background:#fff;color:#243445;box-shadow:0 4px 18px #24344520;font:500 12px/1.5 Chillax,Arial,sans-serif;text-align:center}
+.contact-tooltip:not(:empty){display:block;animation:bubble-pop .2s ease-out}
+.contact-tooltip::after{content:"";position:absolute;bottom:-7px;left:calc(50% - 6px);width:12px;height:12px;background:#fff;border-right:1px solid #688c9655;border-bottom:1px solid #688c9655;transform:rotate(45deg)}
+@media(max-width:600px){.contact-icons{gap:22px}.contact-tooltip{width:180px}.contact-copy:first-child .contact-tooltip{left:0;transform:none}.contact-copy:last-child .contact-tooltip{left:auto;right:0;transform:none}}
+
+/* Start with only the scroll invitation; JavaScript reveals the pen and avatars. */
+.signature-cutout,.signature-hint{opacity:0}
+.story-arrow{visibility:hidden}
+
+/* Consistent cards, disclosure rows, and supplied institution marks. */
+.intro-directory a:first-child{padding-left:12px}
+.research{overflow:visible;z-index:1}
+.research-glass{overflow:visible;bottom:-180px;mask-image:linear-gradient(#000 calc(100% - 230px),transparent 100%)}
+.mentor-column h4{margin-bottom:18px}
+.mentor-column h4+ul,.mentor-column h4+p{margin-top:0;padding-top:16px;border-top:1px solid #61452d25}
+.mentor-column:first-child h4+ul{border-top:1px solid #61452d25}
+.mentor-photo,.speech-photo{position:relative}
+.mentor-photo img,.speech-photo img{transition:filter .25s ease}
+.mentor-photo:hover img,.mentor-photo:focus-visible img,.speech-photo:hover img,.speech-photo:focus-visible img{filter:brightness(.68)}
+.mentor-photo:hover .band-caption,.mentor-photo:focus-visible .band-caption,.speech-photo:hover .band-caption,.speech-photo:focus-visible .band-caption{opacity:1}
+.mentor-photo .band-caption,.speech-photo .band-caption{font-size:12px;padding:12px}
+.research-details,#more-research{border-top:1px solid #142c4555;border-bottom:0;background:transparent}
+.research-details summary,#more-research summary{display:flex;justify-content:space-between;align-items:center;padding:12px 0;font:500 13px/1.55 Chillax,Arial,sans-serif;border:0}
+#more-research summary small{font-weight:700;font-size:12px;opacity:1}
+.research-details .detail-symbol,#more-research .detail-symbol{font-size:13px}
+.research-logos{display:flex;align-items:center;gap:18px;margin-top:18px}
+.research-logos img{object-fit:contain;width:auto;height:62px;max-width:220px}
+.research-logos img:first-child{height:82px}
+.institution-logo{display:block;width:92px;height:92px;object-fit:contain;margin-bottom:14px;border-radius:3px}
+@media(max-width:600px){.research-logos{display:flex}.research-logos img:first-child{height:65px;max-width:190px}.research-logos img{height:50px}}
+
+/* Research figures use the same card-turn animation as the performance deck. */
+#research-featured-media{min-width:0;align-self:center;margin:0;padding:12px 0}
+.research-figure-deck.photo-deck{position:relative;width:80%;max-width:340px;aspect-ratio:4/5;margin:18px auto 26px;clip-path:inset(-12% -200% -12% -12%)}
+.research-figure-deck.photo-deck>button{border:8px solid #e4edf1;background:#fff;box-shadow:0 10px 24px #142c4526;padding:0;cursor:zoom-in}
+.research-figure-deck img{display:block;width:100%;height:100%;object-fit:contain;background:white}
+.research-figure-deck .image-expand{position:absolute;right:8px;bottom:8px;width:32px;height:32px;display:grid;place-items:center;background:#142c45b0;color:white;border-radius:50%;font-size:22px}
+#research-featured-media .deck-controls{position:static;display:flex;justify-content:center;width:100%;gap:22px}
+#research-featured-media .deck-controls button{color:#142c45;border-color:#688c96;font-family:Chillax,Arial,sans-serif}
+@media(max-width:700px){.research-figure-deck.photo-deck{max-width:280px;width:72%}}
+/* Let each scientific card follow its cropped figure rather than adding letterboxing. */
+.research-figure-deck.photo-deck{max-width:280px;aspect-ratio:1316/2531}
+.research-figure-deck.photo-deck>button{inset:auto 0 0;height:auto}
+.research-figure-deck img{height:100%;object-fit:contain}
+.research-figure-deck.photo-deck>button{overflow:visible}
+.research-figure-deck .image-expand{right:-16px;top:-16px;bottom:auto}
+.research-figure-card[inert] .image-expand{display:none}
+
+/* Use real white letters rather than the reversed Fasad image. */
+#speech #speech-title{display:block;width:100%;height:auto;max-width:100%;padding:0;background:transparent!important;color:#fff!important;line-height:1.1;overflow:visible}
+.speech-title-text{display:block;color:#fff!important;background:transparent!important;font-family:Timeless,Chillax,sans-serif;font-weight:700;font-size:clamp(28px,3.9vw,56px);letter-spacing:.15em;white-space:nowrap;line-height:1.1}
+.speech-title-caption{margin-top:18px}
+@media(max-width:600px){.speech-title-text{font-size:clamp(19px,5.3vw,32px);letter-spacing:.06em}}
+
+/* Main Speech & Debate heading: Fasad, preserving its white color. */
+#speech-title .speech-title-text{font-family:Fasad,Arial,sans-serif;font-weight:400}
+/* Research metadata, paragraph alignment and natural Fasad spacing, revision 53. */
+#more-research .entry-meta .institution-logo{margin-top:18px;margin-bottom:0;width:110px;height:110px}
+#more-research .entry-reflection{font-family:Chillax,Arial,sans-serif;font-style:normal;font-weight:500}
+.show-copy .devising{max-width:none;margin-left:0;margin-right:0;width:100%}
+#speech #speech-title{display:inline-block;width:max-content;max-width:100%}
+#speech-title .speech-title-text{letter-spacing:normal}
+#speech-title .speech-title-caption{width:100%;letter-spacing:normal}
+/* Revision 54: confine decorative panes to the viewport without cutting vertical transitions. */
+html,body{overflow-x:clip}
+.research-layout.research-featured-divider{align-items:start}
+.research-featured-divider .research-copy>.eyebrow{font-family:Chillax,Arial,sans-serif;font-weight:500;letter-spacing:.06em;margin-top:0}
+.research-copy .research-caution{font-size:15px!important;line-height:1.55}
+.sstp-gallery.research-details{margin-top:24px;border-bottom:0}
+.sstp-gallery>summary{padding:12px 0;font-family:Chillax,Arial,sans-serif;font-size:13px}
+.sstp-gallery>summary h3{font:inherit;letter-spacing:normal;margin:0}
+.sstp-gallery .gallery-toolbar{justify-content:flex-end;margin:12px 0}
+.sstp-gallery .hover-expand-gallery{margin-bottom:18px}
+.downloads-page{background:#fbfcfb}
+.download-hub{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:48px 6%;min-height:calc(100svh - 90px);align-items:stretch}
+.download-tile{position:relative;text-align:left;border:1px solid #142c4526;border-radius:24px;padding:36px;min-height:390px;display:flex;flex-direction:column;justify-content:center;gap:28px;font-family:Chillax,Arial,sans-serif;color:#142c45;opacity:1;cursor:default;scroll-margin-top:110px}
+.research-download{background:linear-gradient(145deg,#e1f5f5,#eaf0fb)}
+.theatre-download{background:linear-gradient(145deg,#f6e4ee,#eee6f5)}
+.download-kicker{font-size:12px;letter-spacing:.15em}
+.download-title{font-size:clamp(26px,3.6vw,48px);line-height:1.2;font-weight:600}
+.download-status{font-size:14px;opacity:.65}
+.download-icon{position:absolute;right:30px;bottom:28px;font-size:38px}
+@media(max-width:700px){.download-hub{grid-template-columns:1fr;gap:20px;padding:30px 6%}.download-tile{min-height:300px;padding:28px}.download-title{font-size:32px}}
+/* Revision 55: real PDF downloads and compact research output previews. */
+.download-hub .research-outputs{grid-column:1/-1;margin-top:20px;min-width:0}
+.research-outputs h2{font-family:Chillax,Arial,sans-serif;font-weight:600;font-size:clamp(24px,3vw,36px);letter-spacing:normal;margin:0 0 24px}
+.output-strips{display:grid;gap:18px}
+.output-strip{display:flex;align-items:center;gap:28px;min-height:155px;padding:18px 28px;background:#eef4f5;border:1px solid #142c4520;border-radius:16px;color:#142c45;transition:background .2s ease}
+.output-strip:hover{background:#e4eef1}
+.output-preview{flex:0 0 155px;height:120px;display:flex;align-items:center;justify-content:center}
+.output-preview img{max-height:100%;max-width:100%;width:auto;height:auto;object-fit:contain;box-shadow:0 3px 12px #142c4526;background:white}
+.output-copy{display:flex;flex-direction:column;gap:8px;flex:1;min-width:0}
+.output-label{font-family:Chillax,Arial,sans-serif;font-weight:600;font-size:clamp(17px,2vw,25px);line-height:1.35}
+.output-format{font-size:13px;opacity:.6}
+.output-download{font-size:30px}
+.download-hub a.download-tile{cursor:pointer;transition:box-shadow .2s ease}
+.download-hub a.download-tile:hover{box-shadow:0 8px 24px #142c4512}
+@media(max-width:700px){.output-strip{gap:18px;padding:16px;min-height:125px}.output-preview{flex-basis:90px;height:95px}.output-download{font-size:24px}}
+
+/* The opening cue stays in the initial viewport and exits before the drawing builds. */
+.line-scroll{top:70svh;left:50%;transform:translateX(-50%);white-space:nowrap;opacity:1}
+/* Lift the whole contact context above the continuous story drawing. */
+.contact-strip{z-index:5}
+
+.research-intro a[download],.theater-heading a[download]{font-weight:700}

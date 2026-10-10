@@ -1,0 +1,4 @@
+Animations adapted from Skiper UI https://skiper-ui.com
+Skiper52, Skiper58 and Skiper40 Link001, supplied by the site owner.
+Original author: Skiper UI. Free-version attribution retained on both pages.
+Native HTML/CSS/JavaScript adaptation preserves this site's existing fonts, links and image viewer.

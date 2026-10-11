@@ -337,10 +337,6 @@ document.querySelectorAll('[data-expand]').forEach(link => {
   cutouts.querySelector('.signature-hint').style.opacity=String(Math.max(0,Math.min(1,(penProgress-.87)/.08)));
   cutouts.style.opacity='1';
   cutouts.classList.toggle('is-resting',scrollY>signatureTravel+innerHeight);
-  const scrollCue=document.querySelector('.line-scroll');
-  scrollCue.style.opacity=String(Math.max(0,1-scrollY/80));
-  scrollCue.style.visibility=scrollY>=80?'hidden':'visible';
-  scrollCue.style.pointerEvents=scrollY>=80?'none':'auto';
   signaturePath.setAttribute("transform",`translate(0 ${signatureOffset})`);
   for(const item of paths) {
    const p=item.end===0?1:Math.max(0,Math.min(1,(cursor-item.start)/(item.end-item.start)));

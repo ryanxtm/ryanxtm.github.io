@@ -32,7 +32,7 @@
   });
 
   // Link001: an underline drawing from the left and a gently arriving arrow.
-  document.querySelectorAll('a[href]:not(.skip-link):not(.site-header nav a):not(.wordmark)').forEach(link => {
+  document.querySelectorAll('a[href]:not(.skip-link):not(.line-scroll):not(.site-header nav a):not(.wordmark)').forEach(link => {
     link.classList.add('skiper-link');
     if (getComputedStyle(link).position === 'static') link.classList.add('skiper-positioned');
     const line = document.createElement('span');

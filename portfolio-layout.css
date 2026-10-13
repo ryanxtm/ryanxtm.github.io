@@ -115,3 +115,9 @@
 @media(prefers-reduced-motion:reduce){.band-caption,.band-photo img,.production-circle,.circle-label,.mentor-photo img,.speech-photo img{transition:none}}
 /* Keep production labels inside the viewport at the ends of each photo cluster. */
 @media(max-width:700px){.production-orbit:nth-child(n+5) .circle-label{left:auto;right:0;transform:none}}
+
+/* Center Ryan within the circular production thumbnails; keep viewer photos intact. */
+.production-crop{width:100%;height:100%;overflow:hidden;border-radius:50%;display:block;min-height:0}
+.production-crop img{width:100%;height:100%;object-fit:cover}
+.crop-clue-replacement img{transform:scale(1.8);transform-origin:56% 90%}
+.crop-survive-shakespeare img{object-position:100% center;transform:scale(1.8);transform-origin:90% 95%}

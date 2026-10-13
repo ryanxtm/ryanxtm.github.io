@@ -200,11 +200,11 @@ window.portfolioContent = {
       "year": "2024",
       "image": {
         "id": "clue-replacement",
-        "original": "c503c5b4b230a47a55166ec7c5820714.jpg",
-        "filename": "c503c5b4b230a47a55166ec7c5820714.jpg",
-        "src": "assets/media/clue-replacement.webp",
-        "width": 1600,
-        "height": 1200
+        "original": "NewCluephoto.jpg",
+        "filename": "NewCluephoto.jpg",
+        "src": "assets/media/clue-v2.jpg",
+        "width": 1706,
+        "height": 1279
       }
     },
     {

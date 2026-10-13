@@ -13,7 +13,7 @@
   const initials=production.title.split(/\s+/).filter(w=>!['a','the','of','in'].includes(w.toLowerCase())).slice(0,2).map(w=>w[0]).join('');
   const label=`${production.title} · ${production.role} · ${production.year}`;
   const tooltip=`<span class="circle-label">${escape(label)}${production.image?'':' · Photo to come'}</span>`;
-  const body=production.image?photo(production.image,production.title):`<span class="circle-initials" aria-hidden="true">${escape(initials)}</span>`;
+  const body=production.image?`<span class="production-crop crop-${production.image.id}">${photo(production.image,production.title)}</span>`:`<span class="circle-initials" aria-hidden="true">${escape(initials)}</span>`;
   const item=document.createElement('div');item.className=`production-orbit orbit-${i%4}`;
   item.innerHTML=production.image?viewer(production.image,production.title,label,body+tooltip,'production-circle'):`<div class="production-circle is-placeholder" tabindex="0" role="img" aria-label="${escape(label)}. Photo placeholder">${body}${tooltip}</div>`;
   document.querySelector(i<8?'.cluster-left':'.cluster-right').append(item);

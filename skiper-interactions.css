@@ -39,3 +39,7 @@ footer>.animation-credit{width:100%;flex:0 0 100%;text-align:right}
 
 /* The animated line replaces the footer link’s original underline. */
 .footer-work.skiper-link{text-decoration:none;border-bottom:0}
+
+/* Preserve Hebdomadal glyph overhangs in the fun navigation roll. */
+.header-fun-link .text-roll{padding:.22em .2em;margin:-.22em -.2em}
+.header-fun-link .roll-second{padding:.22em .2em}

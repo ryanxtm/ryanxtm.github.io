@@ -257,3 +257,5 @@ html,body{overflow-x:clip}
 .contact-strip{z-index:5}
 
 .research-intro a[download],.theater-heading a[download]{font-weight:700}
+
+.site-header nav a.header-fun-link{font-family:Hebdomadal,Chillax,sans-serif;font-weight:400;text-transform:lowercase;white-space:nowrap}

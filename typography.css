@@ -56,10 +56,10 @@ body{position:relative}
 @media(max-width:600px){.site-header .wordmark{font-size:30px}}
 
 /* Match header navigation to each directory display face. */
-.site-header nav a[href="#research"]{font-family:Dmitrieva,Chillax,sans-serif;font-weight:400}
-.site-header nav a[href="#theater"]{font-family:Timeless,Chillax,sans-serif;font-weight:700}
-.site-header nav a[href="#mentorship"]{font-family:Hayko,Arial,sans-serif;font-weight:400}
-.site-header nav a[href="#speech"]{font-family:'Libre Caslon Display',Chillax,sans-serif;font-weight:400}
+.site-header nav a[href$="#research"]{font-family:Dmitrieva,Chillax,sans-serif;font-weight:400}
+.site-header nav a[href$="#theater"]{font-family:Timeless,Chillax,sans-serif;font-weight:700}
+.site-header nav a[href$="#mentorship"]{font-family:Hayko,Arial,sans-serif;font-weight:400}
+.site-header nav a[href$="#speech"]{font-family:'Libre Caslon Display',Chillax,sans-serif;font-weight:400}
 .site-header nav a{font-style:normal}
 
 /* Theatre heading swap and forthcoming credits, revision 36. */

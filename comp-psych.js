@@ -1,0 +1,7 @@
+(() => {
+ const root=document.querySelector('.comp-carousel');if(!root)return;
+ const track=root.querySelector('.comp-track'),cards=[...track.children],dots=[...root.querySelectorAll('[data-comp-index]')],count=root.querySelector('.comp-count'),reduced=matchMedia('(prefers-reduced-motion: reduce)');let active=0,frame=0;
+ function sync(){frame=0;const mid=track.getBoundingClientRect().left+track.clientWidth/2;let closest=Infinity;cards.forEach((card,i)=>{const r=card.getBoundingClientRect(),d=Math.abs(r.left+r.width/2-mid);if(d<closest){closest=d;active=i}});cards.forEach((card,i)=>card.classList.toggle('is-active',i===active));dots.forEach((dot,i)=>dot.setAttribute('aria-current',String(i===active)));count.textContent=`${active+1} / ${cards.length}`}
+ function go(i){const card=cards[(i+cards.length)%cards.length],r=card.getBoundingClientRect(),t=track.getBoundingClientRect();track.scrollTo({left:track.scrollLeft+r.left-t.left-(track.clientWidth-r.width)/2,behavior:reduced.matches?'instant':'smooth'})}
+ track.addEventListener('scroll',()=>{if(!frame)frame=requestAnimationFrame(sync)},{passive:true});root.querySelectorAll('[data-comp-step]').forEach(b=>b.addEventListener('click',()=>go(active+Number(b.dataset.compStep))));dots.forEach((b,i)=>b.addEventListener('click',()=>go(i)));track.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();go(active+(e.key==='ArrowRight'?1:-1))}});addEventListener('resize',()=>{go(active);sync()});sync();
+})();
